@@ -16,4 +16,5 @@ jobs:
 
       - name: List S3 buckets
         run: |
-          aws s3 ls
+          $ BUCKET_COUNT=$(aws s3 ls | wc -l)
+          echo "S3バケットの数は$BUCKET_COUNTです"
